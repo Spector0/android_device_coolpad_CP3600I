@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/google/shamrock
+DEVICE_PATH := device/coolpad/CP3600I
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -42,8 +42,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_SOURCE := kernel/google/msm8952
-TARGET_KERNEL_CONFIG := cyanogenmod_shamrock_defconfig
+TARGET_KERNEL_SOURCE := kernel/coolpad/msm8952
+TARGET_KERNEL_CONFIG := cyanogenmod_CP3600I_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 
@@ -51,7 +51,7 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-ea
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := shamrock
+TARGET_OTA_ASSERT_DEVICE := CP3600I
 
 # Audio
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
@@ -178,4 +178,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/google/google/BoardConfigVendor.mk
+-include vendor/coolpad/CP3600I/BoardConfigVendor.mk
